@@ -67,6 +67,12 @@ query_engine = RouterQueryEngine(
     verbose=True
 )
 
+
+response = query_engine.query(
+    "Kokia suma skiriama projekto finansavimui?"
+)
+print(str(response))
+
 response = query_engine.query("Parašyk dokumento santrauką.")
 print(str(response))
 
@@ -74,12 +80,5 @@ from py_trans import PyTranslator
 
 tr = PyTranslator()
 
-resp_str = str(response["translation"])
+resp_str = str(response)
 print(tr.google(resp_str, "lt"))
-
-
-
-response = query_engine.query(
-    "Kokia suma skiriama projekto finansavimui?"
-)
-print(str(response))
