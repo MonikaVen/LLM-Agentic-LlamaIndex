@@ -2,7 +2,7 @@ from helper import get_openai_api_key
 
 OPENAI_API_KEY = get_openai_api_key()
 
-print(OPENAI_API_KEY)
+print("Read the OPENAI_API_KEY")
 
 import nest_asyncio
 
